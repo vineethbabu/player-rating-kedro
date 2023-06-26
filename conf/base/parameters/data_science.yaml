@@ -1,0 +1,25 @@
+batsmen_model_options:
+  test_size: 0.2
+  random_state: 3
+  features:
+    - batting_average
+    - strike_rate
+    - half_centuries
+    - centuries
+    - boundary_score_percentage
+    - consistance
+    - score_25_percentile
+    - score_50_percentile
+    - score_75_percentile
+
+bowler_model_options:
+  test_size: 0.2
+  random_state: 3
+  features:
+    - bowling_average
+    - bowler_strike_rate
+    - bowler_economy_rate
+    - dot_ball_percentage
+    - wickets_caught
+    - wickets_bowled
+    - wickets_lbw

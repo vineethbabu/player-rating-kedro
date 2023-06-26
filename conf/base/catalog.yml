@@ -1,0 +1,33 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+batsmandata:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/batsmen_performance_data.csv
+
+bowlerdata:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/bowler_performance_data.csv
+
+preprocessed_batsmen_performance:
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/preprocessed_batsmen.pq
+
+preprocessed_bowler_performance:
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/preprocessed_bowler.pq
+
+batsmen_model_input_table:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/batsmen_model_input_table.pq
+
+bowler_model_input_table:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/bowler_model_input_table.pq
+
+classifier:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/classifier.pickle
+  versioned: true
